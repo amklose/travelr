@@ -1,0 +1,6 @@
+name: travelr
+recipe: pantheon
+config:
+  framework: drupal8
+  site: travelr
+  id: d7fe6e87-a06c-400a-8666-cd0a516058c0

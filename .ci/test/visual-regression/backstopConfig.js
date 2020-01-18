@@ -1,13 +1,17 @@
-// Stash dev URL, removing any trailing slash
+/**
+ * @file
+ * Stash dev URL, removing any trailing slash.
+ */
+
 const devURL = process.env.DEV_SITE_URL.replace(/\/$/, "");
 
-// Stash multidev URL, removing any trailing slash
+// Stash multidev URL, removing any trailing slash.
 const multidevURL = process.env.MULTIDEV_SITE_URL.replace(/\/$/, "");
 
 const pathsToTest = {
     'Homepage': '/',
     'Hello World': '/hello-world/',
-}
+};
 
 let scenariosToTest = [];
 
@@ -61,6 +65,5 @@ module.exports = {
     },
     asyncCaptureLimit: 5,
     asyncCompareLimit: 50,
-    debug: false,
     debugWindow: false
 };
