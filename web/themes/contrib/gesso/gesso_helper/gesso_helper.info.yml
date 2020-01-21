@@ -1,0 +1,9 @@
+name: Gesso Helper
+description: Provides additional functionality for the Gesso theme
+type: module
+core: '8.x'
+
+# Information added by Drupal.org packaging script on 2019-10-29
+version: '8.x-3.2'
+project: 'gesso'
+datestamp: 1572381192
