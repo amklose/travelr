@@ -40,6 +40,12 @@ travelr:
         light-1: "#f9dede"
         dark: "#cd2026"
         dark-1: "#981b1e"
+    earth:
+      blue-dark: "#4f4cb0"
+      blue: "#6b93d6"
+      gray: "#e9eff9"
+      green: "#9fc164"
+      tan: "#d8c596"
   box-shadow:
     "0": none
     "1": 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
