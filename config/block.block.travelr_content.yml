@@ -1,0 +1,22 @@
+uuid: cecf0d3d-bfe5-4330-9552-dba3f03e9370
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - travelr
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: travelr_content
+theme: travelr
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

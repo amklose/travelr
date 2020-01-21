@@ -1,0 +1,22 @@
+uuid: 3ff91df3-5721-49d9-99ca-51efc91bd8f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - travelr
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: travelr_breadcrumbs
+theme: travelr
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

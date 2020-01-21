@@ -1,0 +1,22 @@
+uuid: 1be403b9-a7e1-449f-a7d5-8b8c8fc2e828
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - travelr
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: travelr_help
+theme: travelr
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

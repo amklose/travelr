@@ -1,0 +1,25 @@
+uuid: 6f6a4652-12a1-4320-8cdf-b83226888567
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - travelr
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: travelr_branding
+theme: travelr
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

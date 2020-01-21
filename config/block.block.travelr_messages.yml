@@ -1,0 +1,22 @@
+uuid: 435eb3bd-9a94-42c3-bd2f-8f1727aa0ebe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - travelr
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: travelr_messages
+theme: travelr
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

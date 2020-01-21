@@ -1,0 +1,20 @@
+uuid: e5cf5464-2334-44a7-91b3-36591e430993
+langcode: en
+status: true
+dependencies:
+  theme:
+    - travelr
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: travelr_page_title
+theme: travelr
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
