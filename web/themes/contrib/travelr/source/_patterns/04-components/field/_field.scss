@@ -1,0 +1,29 @@
+// @file
+// Styles for fields.
+
+.field {
+  margin: 0 0 rem(travelr-spacing(sm));
+}
+
+.field__label {
+  display: block;
+  font-size: rem(travelr-font-size(1));
+  font-weight: travelr-font-weight(bold);
+
+  &.is-inline {
+    display: inline-block;
+    margin-right: 0.1em;
+
+    + .field__item {
+      display: inline;
+    }
+
+    + .field__items {
+      display: inline;
+
+      .field__item {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+name: Travelr Helper
+description: Provides additional functionality for the Travelr theme
+type: module
+core: '8.x'
+
+# Information added by Drupal.org packaging script on 2019-10-29
+version: '8.x-3.2'
+project: 'travelr'
+datestamp: 1572381192

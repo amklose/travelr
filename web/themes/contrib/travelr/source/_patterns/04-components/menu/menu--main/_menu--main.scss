@@ -1,0 +1,82 @@
+// @file
+// Styles for the main menu.
+
+.menu--main {
+  @include list-inline;
+
+  .menu__link.has-subnav {
+    position: relative;
+  }
+
+  > .menu__item {
+    display: inline-block;
+    position: relative;
+
+    > .menu__link {
+      display: inline-block;
+      font-weight: travelr-font-weight(semibold);
+      margin-right: travelr-spacing(lg);
+      padding: 0;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.has-subnav {
+        padding-right: 25px;
+      }
+
+      &.has-subnav::after {
+        @include image-replace(16px, 16px);
+        @include svg-background(menu-arrow-down);
+        background-size: 16px 16px;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-40%);
+      }
+    }
+  }
+
+  .menu__subnav {
+    background-color: travelr-color(ui, generic, background-dark);
+    display: none;
+    left: 0;
+    margin: travelr-spacing(xs) 0 0 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+
+    .menu__link {
+      @include link(travelr-color(ui, generic, text-lighter));
+      display: block;
+      line-height: travelr-line-height(tight);
+      padding: rem(travelr-spacing(sm)) rem(travelr-spacing(md));
+      position: relative;
+      text-decoration: none;
+      width: rem(200px);
+
+      &:hover,
+      &:focus {
+        background-color: travelr-color(ui, generic, background-darker);
+      }
+
+      &.has-subnav::after {
+        @include image-replace(16px, 16px);
+        @include svg-background(menu-arrow-right);
+        background-size: 16px 16px;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .menu__subnav {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/// Fetch nested keys
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Keys to fetch
+/// @return {*}
+
+@function map-deep-get($map, $keys...) {
+  $arg-type: type-of($map);
+
+  @if ($arg-type != map) {
+    @error "A valid sass map is required as the first argument. Argument #{$map} is type #{$arg-type}";
+  }
+
+  @each $key in $keys {
+    @if (map-has-key($map, $key)) {
+      $map: map-get($map, $key);
+    } @else {
+      @warn "Key `#{$key}` not found in map";
+    }
+  }
+
+  @return $map;
+}
+
+// Retrieve Main Theme Key
+@function travelr-get-map($map-key, $keys...) {
+  @return map-deep-get($travelr, $map-key, $keys...);
+}
+
+// Get Constrain
+@function travelr-constrain($keys...) {
+  @return travelr-get-map(constrains, $keys...);
+}
+
+// Get Breakpoint
+@function travelr-breakpoint($keys...) {
+  @return travelr-get-map(breakpoints, $keys...);
+}
+
+// @debug 'Travelr Breakpoint' travelr-breakpoint(sm);
+
+// Get Palette
+@function travelr-brand($keys...) {
+  @return travelr-get-map(palette, brand, $keys...);
+}
+
+@function travelr-grayscale($keys...) {
+  @return travelr-get-map(palette, grayscale, $keys...);
+}
+
+// @debug 'Travelr Grayscale'  travelr-grayscale(grayscale-1);
+
+// Get Color
+@function travelr-color($keys...) {
+  @return travelr-get-map(colors, $keys...);
+}
+
+// Get Font Family
+@function travelr-font-family($ff-type) {
+  @return unquote(travelr-get-map(typography, font-family, $ff-type, stack));
+}
+
+// Get Base Font Size
+@function travelr-base-font-size() {
+  @return travelr-get-map(typography, base-font-size);
+}
+
+// Get Font Size
+@function travelr-font-size($keys...) {
+  @return travelr-get-map(typography, font-size, $keys...);
+}
+
+// Get Font Size
+@function travelr-font-weight($keys...) {
+  @return travelr-get-map(typography, font-weight, $keys...);
+}
+
+// Get Line Height
+@function travelr-line-height($keys...) {
+  @return travelr-get-map(typography, line-height, $keys...);
+}
+
+// Get Z Index
+@function travelr-z-index($keys...) {
+  @return travelr-get-map(z-index, $keys...);
+}
+
+// Get spacing
+@function travelr-spacing($keys...) {
+  @return travelr-get-map(spacing, $keys...);
+}
+
+@function travelr-duration($keys...) {
+  @return travelr-get-map(transitions, duration, $keys...);
+}
+
+@function travelr-easing($keys...) {
+  @return unquote(travelr-get-map(transitions, ease, $keys...));
+}
+
+@function travelr-box-shadow($keys...) {
+  @return unquote(travelr-get-map(box-shadow, $keys...));
+}

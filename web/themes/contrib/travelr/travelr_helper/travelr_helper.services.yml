@@ -1,0 +1,6 @@
+services:
+  travelr_helper.travelr_twig_extension:
+    arguments: ['@renderer']
+    class: Drupal\travelr_helper\TwigExtension\TravelrExtensionAdapter
+    tags:
+      - { name: twig.extension }

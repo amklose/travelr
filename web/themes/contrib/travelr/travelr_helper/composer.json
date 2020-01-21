@@ -1,0 +1,21 @@
+{
+    "name": "amklose/travelr_helper",
+    "description": "Provides additional functionality for the Travelr theme.",
+    "type": "drupal-drush",
+    "authors": [
+        {
+            "name": "Forum One",
+            "email": "author@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}

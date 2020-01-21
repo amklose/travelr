@@ -1,0 +1,9 @@
+.tag-list {
+  @include list-clean();
+}
+
+.tag-list__item {
+  display: inline-block;
+  margin-bottom: rem(travelr-spacing(xs));
+  margin-right: rem(travelr-spacing(xs));
+}

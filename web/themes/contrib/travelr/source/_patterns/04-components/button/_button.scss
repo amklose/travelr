@@ -1,0 +1,59 @@
+// @file
+// Styles for Button.
+
+.button {
+  @include button();
+  margin: 0 0 rem(travelr-spacing(xs));
+
+  & + & {
+    margin-left: rem(travelr-spacing(xs)); // LTR
+
+    @if $support-for-rtl {
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: rem(travelr-spacing(xs));
+      }
+    }
+  }
+}
+
+// Drupal outputs this class on buttons that can delete content.
+.button--danger {
+  background-color: travelr-color(button, danger, background);
+  color: travelr-color(button,danger,text);
+
+  &:hover,
+  &:focus {
+    background-color: travelr-color(button, danger, background-hover);
+    color: travelr-color(button,danger,text-hover);
+  }
+
+  &:active {
+    background-color: travelr-color(button, danger, background-active);
+    color: travelr-color(button,danger,text-active);
+  }
+}
+
+// This custom button class, included as an example, is not output by Drupal by default.
+.button--secondary {
+  @include button(
+    travelr-color(button, secondary, background),
+    travelr-color(button, secondary, text),
+    travelr-color(button, secondary, background-hover),
+    travelr-color(button, secondary, text-hover),
+    travelr-color(button, secondary, background-active),
+    travelr-color(button, secondary, text-active)
+  );
+}
+
+// This custom button class, included as an example, is not output by Drupal by default.
+.button--large {
+  font-size: rem(travelr-font-size(2));
+  padding: rem(travelr-spacing(sm)) rem(travelr-spacing(lg));
+}
+
+// This custom button class, included as an example, is not output by Drupal by default.
+.button--small {
+  font-size: rem(travelr-font-size(0));
+  padding: rem(travelr-spacing(xxs)) rem(travelr-spacing(xs));
+}

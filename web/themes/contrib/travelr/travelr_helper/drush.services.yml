@@ -1,0 +1,5 @@
+services:
+  travelr_helper.commands:
+    class: \Drupal\travelr_helper\Commands\TravelrHelperCommands
+    tags:
+      - { name: drush.command }
