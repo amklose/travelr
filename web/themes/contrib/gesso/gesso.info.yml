@@ -72,7 +72,7 @@ component-libraries:
     paths:
       - source/_macros
 
-# Information added by Drupal.org packaging script on 2019-10-29
-version: '8.x-3.2'
+# Information added by Drupal.org packaging script on 2020-03-27
+version: '8.x-3.3'
 project: 'gesso'
-datestamp: 1572381192
+datestamp: 1585336654
