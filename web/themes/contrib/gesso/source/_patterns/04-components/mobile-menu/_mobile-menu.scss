@@ -1,17 +1,35 @@
 // @file
 // Styles for the mobile menu.
 
-$mobile-menu-fallback-bg-color: gesso-color(ui, generic, background-light) !default;
-$mobile-menu-bg-color: rgba(gesso-color(ui, generic, background-light), 0.98) !default;
+$mobile-menu-fallback-bg-color: gesso-color(
+  ui,
+  generic,
+  background-light
+) !default;
+$mobile-menu-bg-color: rgba(
+  gesso-color(ui, generic, background-light),
+  0.98
+) !default;
 $mobile-menu-link-color: gesso-color(ui, generic, text-dark) !default;
 $mobile-menu-link-hover-color: gesso-color(ui, generic, text-darker) !default;
-$mobile-menu-submenu-fallback-bg-color: gesso-color(ui, generic, background-lighter) !default;
-$mobile-menu-submenu-bg-color: rgba(gesso-color(ui, generic, background-lighter), 0.98) !default;
+$mobile-menu-submenu-fallback-bg-color: gesso-color(
+  ui,
+  generic,
+  background-lighter
+) !default;
+$mobile-menu-submenu-bg-color: rgba(
+  gesso-color(ui, generic, background-lighter),
+  0.98
+) !default;
 $mobile-menu-submenu-link-color: gesso-color(ui, generic, text-dark) !default;
-$mobile-menu-submenu-link-hover-color: gesso-color(ui, generic, text-darker) !default;
+$mobile-menu-submenu-link-hover-color: gesso-color(
+  ui,
+  generic,
+  text-darker
+) !default;
 $mobile-menu-button-height: 54px;
 $mobile-menu-button-width: 44px;
-$mobile-menu-font-size: gesso-font-size(2);
+$mobile-menu-font-size: gesso-font-size(3);
 $mobile-menu-line-height: gesso-line-height(base);
 
 .mobile-menu {
@@ -46,7 +64,13 @@ $mobile-menu-line-height: gesso-line-height(base);
   font-weight: gesso-font-weight(bold);
   line-height: $mobile-menu-line-height;
   margin: 0;
-  padding: rem(($mobile-menu-button-height - ($mobile-menu-font-size * $mobile-menu-line-height)) / 2) rem(gesso-spacing(sm));
+  padding: rem(
+      (
+          $mobile-menu-button-height -
+            ($mobile-menu-font-size * $mobile-menu-line-height)
+        ) / 2
+    )
+    rem(gesso-spacing(2));
   text-align: left;
   text-decoration: none;
   white-space: normal;
@@ -66,6 +90,7 @@ $mobile-menu-line-height: gesso-line-height(base);
 }
 
 .mobile-menu__subnav-arrow {
+  @include focus();
   @include image-replace($mobile-menu-button-width, $mobile-menu-button-height);
   @include svg-background-inline(mobile-arrow-down);
   background-attachment: initial;
@@ -77,6 +102,7 @@ $mobile-menu-line-height: gesso-line-height(base);
   box-shadow: none;
   cursor: pointer;
   display: inline-block;
+  outline-offset: 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -90,11 +116,7 @@ $mobile-menu-line-height: gesso-line-height(base);
     }
   }
 
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     @include svg-background-inline(mobile-arrow-up);
   }
 }
@@ -109,7 +131,7 @@ $mobile-menu-line-height: gesso-line-height(base);
 
   .mobile-menu__link {
     color: $mobile-menu-submenu-link-color;
-    padding-left: gesso-spacing(md);
+    padding-left: gesso-spacing(3);
 
     &:hover,
     &:focus,
