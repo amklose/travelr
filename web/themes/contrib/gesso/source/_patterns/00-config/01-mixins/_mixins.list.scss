@@ -8,6 +8,7 @@
 
   li {
     padding-left: 0;
+
     &::before {
       display: none;
     }
@@ -54,7 +55,6 @@
       }
     }
 
-    /* stylelint-disable-next-line selector-no-qualifying-type */
     &.is-active {
       font-weight: gesso-font-weight(bold);
     }
@@ -75,7 +75,10 @@
   }
 }
 
-@mixin list-border($list-border-padding: 0.25rem, $list-border-color: gesso-color(ui, generic, border)) {
+@mixin list-border(
+  $list-border-padding: 0.25rem,
+  $list-border-color: gesso-color(ui, generic, border)
+) {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
