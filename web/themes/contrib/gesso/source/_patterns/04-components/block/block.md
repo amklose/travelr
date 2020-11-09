@@ -4,6 +4,7 @@ title: Block
 ---
 
 __Variables:__
+* modifier_classes: [string] Classes to modify the default component styling.
 * hide_wrapper: [boolean] Whether to output the block wrapper.
 * has_constrain: [boolean] Whether to add a constrain wrapper.
 * constrain_modifier_classes: [string] Additional constrain classes used to
@@ -15,4 +16,4 @@ __Variables:__
 * title_suffix: [object] Additional output populated by modules, intended to be
   displayed after the main title tag that appears in the template.
 * hide_content_wrapper: [boolean] Whether to output the block content wrapper.
-* content: [object] The content of the block.
+* block_content: [object] The content of the block.

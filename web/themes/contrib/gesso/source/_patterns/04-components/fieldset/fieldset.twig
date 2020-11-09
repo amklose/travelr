@@ -1,12 +1,18 @@
-<fieldset class="fieldset fieldset--default">
+{% set classes = [
+  'fieldset',
+  'fieldset--default',
+  modifier_classes ? modifier_classes,
+]|join(' ')|trim %}
+
+<fieldset class="{{ classes }}">
   <legend class="fieldset__legend">
-    <span class="fieldset__legend-text">{{ legend }}</span>
+    <span class="fieldset__legend-text">{{ fieldset_legend }}</span>
   </legend>
   <div class="fieldset__content">
-    {{ content }}
-    {% if description %}
+    {{ fieldset_content }}
+    {% if fieldset_description %}
       <div class="fieldset__description">
-        {{ description }}
+        {{ fieldset_description }}
       </div>
     {% endif %}
   </div>

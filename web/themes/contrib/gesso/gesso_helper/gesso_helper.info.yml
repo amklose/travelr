@@ -3,7 +3,7 @@ description: Provides additional functionality for the Gesso theme
 type: module
 core: '8.x'
 
-# Information added by Drupal.org packaging script on 2020-03-27
-version: '8.x-3.3'
+# Information added by Drupal.org packaging script on 2020-10-14
+version: '8.x-3.4'
 project: 'gesso'
-datestamp: 1585336654
+datestamp: 1602697005

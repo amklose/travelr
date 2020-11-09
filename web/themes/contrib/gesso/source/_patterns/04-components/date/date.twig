@@ -1,4 +1,9 @@
-<div class="date">
+{% set classes = [
+  'date',
+  modifier_classes ? modifier_classes,
+]|join(' ')|trim %}
+
+<div class="{{ classes }}">
   {% if format == 'long-date' %}
     {% include '@base/date-formats/long-date.twig' %}
   {% elseif format == 'long-datetime' %}
@@ -12,6 +17,6 @@
   {% elseif format == 'short-datetime' %}
     {% include '@base/date-formats/short-datetime.twig' %}
   {% else %}
-    {{ content }}
+    {{ date_content }}
   {% endif %}
 </div>
