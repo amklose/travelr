@@ -1,10 +1,11 @@
 // CSS styles and overrides for Pattern Lab only.
 // This stylesheet is not loaded by the theme.
-@import 'breakpoint';
+$pattern-lab-overrides: true;
 
-@import '_patterns/00-config/**/*.scss';
-@import '_patterns/01-global/**/*.scss';
+// Import all site styles.
+@import 'styles';
 
+// Additional styling and overrides for Pattern Lab elements.
 // The container for the 'view all' screen, which contains the list of patterns.
 .pl-c-pattern-index {
   box-sizing: border-box !important;
@@ -305,7 +306,7 @@ $swatch-padding: 1rem;
 // For components used on a dark background. (e.g., `--inverse` variants)
 $dark-bg-padding: 1em;
 
-/* stylelint-disable selector-max-id */
+// stylelint-disable selector-max-id
 [id*='--inverse'].pl-c-pattern {
   background: #212121;
   color: #fff;
@@ -322,4 +323,4 @@ $dark-bg-padding: 1em;
     color: #212121;
   }
 }
-/* stylelint-enable */
+// stylelint-enable
